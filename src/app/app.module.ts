@@ -18,6 +18,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -41,6 +46,11 @@ import { FormsModule } from '@angular/forms';
     MatDatepickerModule,
     MatNativeDateModule,
     FormsModule,
+    BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    MatProgressBarModule,
+    AngularFirestoreModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
