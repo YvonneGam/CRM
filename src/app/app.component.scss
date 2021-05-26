@@ -4,6 +4,7 @@
 
 .menu-icon {
     cursor: pointer;
+    margin-right:8px;
 }
 
 .sidenav {
@@ -11,12 +12,21 @@
 }
 
 .logo-container {
-    border-bottom: 1px solid rgba(0,0,0,0.4);
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    justify-content: center;   
     padding-left: 22px;
     padding-right: 22px;
     min-height: 56px;
     display: flex;
     align-items: center;
+
+    img {
+        width: 85px;
+    }
 }
 
 mat-drawer, mat-drawer-container {

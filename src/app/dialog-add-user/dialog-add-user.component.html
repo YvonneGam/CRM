@@ -5,6 +5,11 @@
 <h1 mat-dialog-title>Add User</h1>
 <div mat-dialog-content>
 
+  <mat-button-toggle-group class="toggle-gender-container" name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle value="bold" (click)="malePic()">Männlich</mat-button-toggle>
+    <mat-button-toggle value="italic" (click)="femalePic()">Weiblich</mat-button-toggle>
+  </mat-button-toggle-group>
+
     <div>
     <mat-form-field class="mr-16" appearance="outline">
         <mat-label>First Name</mat-label>

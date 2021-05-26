@@ -7,7 +7,7 @@
 <th>City</th>
 </tr>
 
-  <tr *ngFor="let user of allUsers"> <!-- zeigt in For-Schleife alle erstellten User an -->
+  <tr *ngFor="let user of allUsers" [routerLink]="['/user/' + user['customIdName']]"> <!-- zeigt in For-Schleife alle erstellten User an -->
     <td>{{ user['firstName'] }} {{ user['lastName'] }}</td> <!-- zeigt aus den Usern den firstName an, an jeweiliger Stelle -->
     <td>{{ user['email'] }}</td>
     <td>{{ user['city'] }}</td>
@@ -19,3 +19,5 @@
   <button (click)="openDialog()" class="add-user-btn" mat-fab color="primary" matTooltip="Add user">
     <mat-icon>add</mat-icon>
   </button>
+
+<!--   <a href='https://de.freepik.com/vektoren/geschaeft'>Geschäft Vektor erstellt von studiogstock - de.freepik.com</a> -->

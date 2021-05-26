@@ -13,6 +13,7 @@ export class DialogAddUserComponent implements OnInit {
   user = new User();
   birthDate!: Date;
   loading = false;
+/*   female = true; */
 
   constructor(public dialogRef: MatDialogRef<DialogAddUserComponent>, private firestore: AngularFirestore) { }
 
@@ -31,7 +32,18 @@ export class DialogAddUserComponent implements OnInit {
         console.log('Adding user finished', result)
         this.dialogRef.close(); //close the dialog
       });
-
-
   }
+
+  femalePic() {
+    this.user.img = "assets/img/profile-female.png";
+    console.log('image changed female');
+  /*   this.female = true; */
+  }
+
+  malePic() {
+    this.user.img = "assets/img/profile-male.png";
+    /* this.female = false; */
+    console.log('image male'); 
+  }
+
 }

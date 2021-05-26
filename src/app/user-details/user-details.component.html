@@ -1,0 +1,38 @@
+<mat-card class="user-detail-header">
+    <button mat-icon-button class="pin-right-upper-corner" [matMenuTriggerFor]="userMenu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+
+      <mat-menu #userMenu="matMenu">
+        <button mat-menu-item (click)="editUserDetail()">Edit</button>
+      </mat-menu>
+
+      <!-- https://stackoverflow.com/questions/55042517/how-can-i-use-ngif-directive-to-change-an-image -->
+
+<img id="profileImg" src="{{user['img']}}">
+<!-- <img *ngIf="!female" src="./assets/img/profile-male.png"> -->
+
+<div class="user-details">
+  <h2>  {{ user['firstName'] }} {{ user['lastName'] }}<br> </h2>
+  {{ user['email'] }}
+</div>
+</mat-card>
+
+
+<mat-card class="mt-32 user-adress-container">
+
+    <button mat-icon-button class="pin-right-upper-corner" [matMenuTriggerFor]="addressMenu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+
+      <mat-menu #addressMenu="matMenu">
+        <button mat-menu-item (click)="editMenu()">Edit</button>
+      </mat-menu>
+
+    <mat-card-title>Address</mat-card-title>
+  <mat-card-content>
+     {{ user['street'] }} <br> <!-- holt sich hier den jeweiligen user mit der definierten variable, zb. street -->
+     {{ user['zipCode'] }} {{ user['city'] }} 
+  </mat-card-content>
+
+</mat-card>

@@ -23,13 +23,21 @@ import { environment } from '../environments/environment';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import {MatCardModule} from '@angular/material/card';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { DialogEditAddressComponent } from './dialog-edit-address/dialog-edit-address.component';
+import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     UserComponent,
-    DialogAddUserComponent
+    DialogAddUserComponent,
+    UserDetailsComponent,
+    DialogEditAddressComponent,
+    DialogEditUserComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +58,9 @@ import {MatCardModule} from '@angular/material/card';
     AngularFireModule.initializeApp(environment.firebase),
     MatProgressBarModule,
     AngularFirestoreModule,
-    MatCardModule
+    MatCardModule,
+    MatMenuModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
